@@ -1,6 +1,6 @@
 ## Setup
 
-Note: If you have never run dataflow job before please try
+Note: If you have never run a dataflow job before please try
 https://cloud.google.com/dataflow/docs/guides/create-pipeline-java this will
 help to enable all needed APIs. Also take look at
 https://cloud.google.com/dataflow/docs/quickstarts/create-streaming-pipeline-template.
