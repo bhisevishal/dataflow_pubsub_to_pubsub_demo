@@ -1,0 +1,48 @@
+{
+    "name": "Pub/Sub to Pub/Sub Streaming Pipeline (Classic)",
+    "description": "A streaming Dataflow pipeline that reads messages from a Google Cloud Pub/Sub topic or subscription and publishes them to another Google Cloud Pub/Sub topic. Optionally uses custom attributes for message ID and timestamp. This is a Classic Template.",
+    "flexTemplate": false,
+    "hidden": false,
+    "streaming": true,
+    "supportsAtLeastOnce": true,
+    "supportsExactlyOnce": true,
+    "defaultStreamingMode": "UNSPECIFIED",
+    "parameters": [
+        {
+            "name": "inputSubscription",
+            "label": "Input Pub/Sub Subscription",
+            "helpText": "The full resource path of the Pub/Sub subscription to read from. Format: projects/<PROJECT_ID>/subscriptions/<SUBSCRIPTION_NAME>. Required if Input Pub/Sub Topic is not provided.",
+            "isOptional": true
+        },
+        {
+            "name": "inputTopic",
+            "label": "Input Pub/Sub Topic",
+            "helpText": "The full resource path of the Pub/Sub topic to read from. Format: projects/<PROJECT_ID>/topics/<TOPIC_NAME>. Required if Input Pub/Sub Subscription is not provided.",
+            "isOptional": true
+        },
+        {
+            "name": "outputTopic",
+            "label": "Output Pub/Sub Topic",
+            "helpText": "The full resource path of the Pub/Sub topic to write to. Format: projects/<PROJECT_ID>/topics/<TOPIC_NAME>",
+            "isOptional": false
+        },
+        {
+            "name": "messageIdAttribute",
+            "label": "Message ID Attribute (Optional)",
+            "helpText": "Optional. The name of the Pub/Sub message attribute to use for the message ID. If provided, this attribute will be read from incoming messages and set on outgoing messages. If not specified, Pub/Sub's system-generated ID and behavior are used.",
+            "isOptional": true,
+            "regexes": [
+                "^[a-zA-Z0-9-_.~+%]{1,256}$"
+            ]
+        },
+        {
+            "name": "timestampAttribute",
+            "label": "Timestamp Attribute (Optional)",
+            "helpText": "Optional. The name of the Pub/Sub message attribute to use for the event timestamp (RFC 3339 format). If provided, this attribute will be read from incoming messages (to set the element's event time) and set on outgoing messages (with the element's event time). If not specified, the Pub/Sub message's publish time is used for incoming messages, and no custom timestamp attribute is set for outgoing messages.",
+            "isOptional": true,
+            "regexes": [
+                "^[a-zA-Z0-9-_.~+%]{1,256}$"
+            ]
+        }
+    ]
+}
