@@ -92,9 +92,7 @@ gcloud pubsub subscriptions create "${PUB_SUB_OUTPUT_SUBSCRIPTION:?}" \
 ./build_flex_template.sh
 ```
 
-## Run Pipelines
-
-### Start Producer pipeline
+## Start Producer pipeline
 
 Note: If you like to skip starting producer pipeline then in
 `set_required_env_vars.sh` then set `PUB_SUB_INPUT_TOPIC` to
@@ -122,9 +120,9 @@ gcloud dataflow flex-template run "${JOB_NAME_PRODUCER_01:?}" \
 ;
 ```
 
-### Start Consumer Pipeline using Jar, Flex Template or Classic Template
+## Start Consumer Pipeline using Jar, Flex Template or Classic Template
 
-#### Start Consumer Pipeline using Jar
+### Start Consumer Pipeline using Jar
 
 ```shell
 ./run_pubsub_consumer_pipeline_using_jar_file.sh
@@ -155,7 +153,7 @@ java -cp "${JAR_FILE_PATH:?}" \
 ;
 ```
 
-#### Start Consumer Pipeline using Flex Template
+### Start Consumer Pipeline using Flex Template
 
 ```shell
 ./run_pubsub_consumer_pipeline_using_flex_template.sh
@@ -183,7 +181,7 @@ gcloud dataflow flex-template run "${JOB_NAME_A:?}" \
 ;
 ```
 
-#### Start Consumer Pipeline using Classic Template
+### Start Consumer Pipeline using Classic Template
 
 ```shell
 ./run_pubsub_consumer_pipeline_using_classic_template.sh
