@@ -1,8 +1,8 @@
 ## Setup
 
-Note: If you never run dataflow job before please try
+Note: If you have never run dataflow job before please try
 https://cloud.google.com/dataflow/docs/guides/create-pipeline-java this will
-help to eanble all needed APIs. Also take look at
+help to enable all needed APIs. Also take look at
 https://cloud.google.com/dataflow/docs/quickstarts/create-streaming-pipeline-template.
 
 *   Open `./set_required_env_vars.sh` file and update env vars as per you needs.
