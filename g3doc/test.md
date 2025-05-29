@@ -211,9 +211,9 @@ gcloud dataflow jobs run "${JOB_NAME_A:?}" \
 ;
 ```
 
-### Inplace update
+## Inplace update
 
-#### Inplace update using Jar
+### Inplace update using Jar
 
 ```shell
 ./in_place_update_pubsub_consumer_pipeline_using_jar_file.sh
@@ -245,7 +245,7 @@ java -cp "${JAR_FILE_PATH:?}" \
 ;
 ```
 
-#### Inplace update using Flex Template
+### Inplace update using Flex Template
 
 ```shell
 ./in_place_update_pubsub_consumer_pipeline_using_flex_template.sh
@@ -274,7 +274,7 @@ gcloud dataflow flex-template run "${JOB_NAME_A:?}" \
 ;
 ```
 
-#### Inplace update using Classic Template
+### Inplace update using Classic Template
 
 ```shell
 ./in_place_update_pubsub_consumer_pipeline_using_classic_template.sh
